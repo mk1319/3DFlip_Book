@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: #d1cccc;
+      padding: 20px;
+      font-family: Arial;
+    }
+    /* Center website */
+    .main {
+      max-width:100%;
+      margin: auto;
+    }
+    
+    h1 {
+      font-size: 50px;
+      word-break: break-all;
+    }
+    @media only screen and (min-width:900px) {
+      .main {
+        padding-left:50px;
+        padding-right:50px;
+     }
+    } 
+
+   
+  
+    .btn {
+      border: none;
+      outline: none;
+      padding: 12px 16px;
+      background-color: rgb(255, 255, 255);
+      cursor: pointer;
+    }
+    
+    .btn:hover {
+      background-color: rgb(243, 225, 225);
+    }
+    
+    .btn.active {
+      background-color: rgb(5, 5, 5);
+      color: white;
+    }
+    .flip-book-container {
+      border: 1px solid rgb(145, 136, 136);
+    }
+    </style>
+
+
+  
+<div class="main">
+
+  <h2>View Catalogue</h2>
+  <hr>
+  
+    <button class="btn active" value="0">Basket</button>
+    <button class="btn" value="1">Heart Catalogue</button>
+    <button class="btn" value="2">Arya Ventures</button>
+    
+    <div class="flip-book-container" >
+    </div>
+
+  </div>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/html2canvas.min.js"></script>
+  <script src="js/three.min.js"></script>
+  <script src="js/pdf.min.js"></script>
+  <script src="js/3dflipbook.min.js"></script>
+
+  <script type="text/javascript">
+
+  var Book_arr = ['./src/basketcatalogueNEW.pdf', './src/heart_catalogue_2018.pdf', './src/AryaVentures.pdf']
+
+  var start = 0;
+  var button_click = false;
+
+  $('.btn').click(function () {
+    start = $(this).attr("value");
+    $(this).addClass('active');
+    $(this).siblings().removeClass('active');
+    button_click = true
+    $('.flip-book-container').FlipBook({ pdf: Book_arr[start] });
+  });
+
+  if (!button_click) {
+    $('.flip-book-container').FlipBook({ pdf: Book_arr[start] });
+  }
+
+  </script>
+
+</body>
+
+</html>
