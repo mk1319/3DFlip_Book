@@ -13,66 +13,82 @@
     }
     
     body {
-<<<<<<< HEAD
+
       background-color: #ffffff;
-=======
-      background-color: #d1cccc;
->>>>>>> fabb40461169f99d0b3c3d23f2c446e1d5725890
-      margin: 20px;
+      padding:0px;
+      margin:0px;
       font-family: Arial;
     }
     /* Center website */
     .main {
-      max-width:100%;
-      margin: auto;
+      
+     margin:50px;
     }
     
-    h1 {
-      font-size: 50px;
+    .header {
+      font-size: 30px;
+     background-color: rgb(68, 67, 158);
+     text-align: center;
+     
       word-break: break-all;
     }
-    @media only screen and (min-width:900px) {
+    @media only screen and (max-width:900px) {
       .main {
         padding-left:50px;
         padding-right:50px;
+        text-align: center;
      }
     } 
 
-   
+    .caption{
+      margin:50px;
+      text-align: center;
+    }
+
+    .caption>h1{
+      font-size: 40px;
+    }
+    .caption>p{
+      font-size:20px;
+    }
+  
+    .btns{
+     padding:10px;
+     text-align: center;
+     border:none;
+     border-bottom:1px solid #0c1246;
+   }
   
     .btn {
-      border: none;
+      border: 0px;
       outline: none;
       padding: 12px 16px;
-      background-color: rgb(255, 255, 255);
+      background-color: #b9ccf5;
       cursor: pointer;
     }
     
     .btn:hover {
-      background-color: rgb(243, 225, 225);
+      background-color: #6590ec;
     }
     
     .btn.active {
-      background-color: rgb(5, 5, 5);
+      background-color:#4e74c7;
       color: white;
     }
-
-    .flip-book-container {
-      border: 1px solid rgb(145, 136, 136);
-<<<<<<< HEAD
-    }
+    
 
     .flip-book-container{
       display: flex;
       flex-wrap: wrap;
       padding: 0 4px;
+      background-color: rgb(243, 243, 243);
     }
 
     .column {
       display:inline-block;
 			position: relative;
-      width: 50.00%;
-      height:100% ;
+      width: 33.33%;
+      
     }
     .flip-book-container,
     .flip-book-container > .column {
@@ -80,9 +96,10 @@
         }
 
     img{
+      box-shadow: 2px 2px 1px grey;
       width: 100%;
-      height: 100%;
-      border: 1px solid rgb(27, 27, 27);
+      
+      /*border: 1px solid rgb(27, 27, 27);*/
     }
     
       /* Responsive layout - makes a two column-layout instead of four columns */
@@ -93,39 +110,7 @@
   }
 }
 
-=======
-    }
 
-    .flip-book-container{
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0 4px;
-    }
-
-    .column {
-      display:inline-block;
-			position: relative;
-      width: 50.00%;
-    }
-    .flip-book-container,
-    .flip-book-container > .column {
-          padding:10px;
-        }
-
-    img{
-      width: 100%;
-      height: auto;
-    }
-    
-      /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width:800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
->>>>>>> fabb40461169f99d0b3c3d23f2c446e1d5725890
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width:600px) {
   .column {
@@ -133,32 +118,55 @@
     max-width: 100%;
   }
 }
+ .footer {
+   border: 1px solid gray;
+  padding: 8px;
+
+  text-align: center;
+  background-color: rgb(68, 67, 158);
+  margin-top: 50px ;
+  
+  color: #fdfdfd;
+}
+
 
     </style>
+    <div class="header">
+     <h1 style="color: white;">Dvcreation</h1>
+      </div>
+
     
-
-  
 <div class="main">
-
-  <h2>View Catalogue</h2>
-  <hr>
   
-<<<<<<< HEAD
+
+  <div class="caption">
+    <h1>View Catalogue</h1>
+   <p>Select Product what you want </p>
+  </div>
+  
+
+  
+  
+  <div class="btns">
     <button class="btn active" value="0">Watch</button>
     <button class="btn" value="1">plastic</button>
     <button class="btn" value="2">trophy</button>
     <button class="btn" value="3">wood</button>
-
-
-=======
-    <button class="btn active" value="0">Image1</button>
-    <button class="btn" value="1">Image2</button>
->>>>>>> fabb40461169f99d0b3c3d23f2c446e1d5725890
+  </div>
 
     <div class="flip-book-container">
        
     </div>
   </div>
+  <div class="footer">
+    
+    <h1>About us</h1>
+    <a href="mailto:dvcreation05@gmail.com" style="text-decoration: none; color: white ;">dvcreation05@gmail.com</a>
+      <p>GST: 27CORPM3736GIZI</p>
+      <p>Kurar village,Malad(E),Mumbai-400097</p>
+    
+
+    </div>
 
 
 
@@ -168,15 +176,12 @@
   <script src="./js/jquery.min.js"></script>
   <script>
      
-<<<<<<< HEAD
+
   var Book_arr = [['./src/image1/003.jpg','./src/image1/002.jpg','./src/image1/0012.jpg','./src/image1/0013.jpg','./src/image1/0019.jpg','./src/image1/0040.jpg','./src/image1/0041.jpg','./src/image1/0045.jpg','./src/image1/0046.jpg','./src/image1/0047.jpg','./src/image1/0049.jpg','./src/image1/0050.jpg','./src/image1/0051.jpg','./src/image1/0054.jpg','./src/image1/0057.jpg','./src/image1/0059.jpg','./src/image1/0062.jpg','./src/image1/0065.jpg','./src/image1/0066.jpg','./src/image1/0068.jpg','./src/image1/0071.jpg','./src/image1/0072.jpg','./src/image1/0073.jpg','./src/image1/0074.jpg','./src/image1/0075.jpg','./src/image1/0076.jpg','./src/image1/0078.jpg','./src/image1/0079.jpg','./src/image1/0080.jpg','./src/image1/0081.jpg','./src/image1/0009.jpg','./src/image1/0010.jpg','./src/image1/d1.jpg','./src/image1/d2.jpg','./src/image1/d3.jpg','./src/image1/0011.jpg','./src/image1/0006.jpg','./src/image1/0007.jpg','./src/image1/0008.jpg','./src/image1/0002.jpg','./src/image1/0003.jpg','./src/image1/0005.jpg'],
                   ['./src/plastic/0082.jpg','./src/plastic/0090.jpg','./src/plastic/0094.jpg','./src/plastic/0096.jpg','./src/plastic/0097.jpg','./src/plastic/0099.jpg','./src/plastic/0100.jpg','./src/plastic/0101.jpg','./src/plastic/0102.jpg','./src/plastic/0106.jpg','./src/plastic/0107.jpg','./src/plastic/0108.jpg','./src/plastic/0110.jpg','./src/plastic/0111.jpg','./src/plastic/0112.jpg','./src/plastic/0113.jpg','./src/plastic/0114.jpg','./src/plastic/0115.jpg','./src/plastic/0116.jpg','./src/plastic/0117.jpg','./src/plastic/0118.jpg','./src/plastic/0119.jpg','./src/plastic/0120.jpg'],
                    ['./src/trophy/p1.png','./src/trophy/p2.png','./src/trophy/p3.png','./src/trophy/p4.png','./src/trophy/p5.png','./src/trophy/p6.png','./src/trophy/p7.png','./src/trophy/p8.png','./src/trophy/p9.png','./src/trophy/p10.jpg','./src/trophy/p12.jpg','./src/trophy/p13.png','./src/trophy/p14.png','./src/trophy/p15.png','./src/trophy/p16.png','./src/trophy/p17.png','./src/trophy/p18.png','./src/trophy/p19.png','./src/trophy/p20.png','./src/trophy/p21.jpg','./src/trophy/p21.png'],
                   ['./src/wood/0001.jpg','./src/wood/002.jpg','./src/wood/0002.jpg','./src/wood/0003.jpg','./src/wood/0004.jpg','./src/wood/0007.jpg','./src/wood/0008.jpg','./src/wood/0014.jpg','./src/wood/0015.jpg','./src/wood/0018.jpg','./src/wood/0019.jpg','./src/wood/d.jpg']]
-=======
-  var Book_arr = [['./src/image1/harvy.png','./src/image1/pic1.jpg'],
-                  ['./src/image2/pic1.jpg','./src/image2/harvy.png']]
->>>>>>> fabb40461169f99d0b3c3d23f2c446e1d5725890
+
 
     var start = 0;
     var button_click = false;
@@ -191,12 +196,9 @@
             
      for(let i=0;i<Book_arr[start].length;i++)
      {
-<<<<<<< HEAD
+
       $(".flip-book-container").append(`<div class="column" ><img src="${Book_arr[start][i]}"/></div>`);
-=======
-      $(".flip-book-container").append(`<div class="column" id="id${i}"><img src="${Book_arr[start][i]}"/></div>`);
->>>>>>> fabb40461169f99d0b3c3d23f2c446e1d5725890
-      
+
      }
 
     });
@@ -204,13 +206,12 @@
     if (!button_click) {
     for(let i=0;i<Book_arr[start].length;i++)
      {
-<<<<<<< HEAD
+
       $(".flip-book-container").append(`<div class="column" ><img src="${Book_arr[start][i]}"/></div>`);
-=======
-      $(".flip-book-container").append(`<div class="column" id="id${i}"><img src="${Book_arr[start][i]}"/></div>`);
->>>>>>> fabb40461169f99d0b3c3d23f2c446e1d5725890
+
      }
     }
+     
   </script>
  
   <!--  <script src="js/html2canvas.min.js"></script>
@@ -222,7 +223,6 @@
 <<<<<<< HEAD
 =======
 
->>>>>>> fabb40461169f99d0b3c3d23f2c446e1d5725890
   </script> -->
 
 </body>
